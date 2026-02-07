@@ -11,7 +11,6 @@ TarantismAudioProcessorEditor::TarantismAudioProcessorEditor(TarantismAudioProce
     gainSlider.setSliderStyle(juce::Slider::RotaryHorizontalVerticalDrag);
     gainSlider.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 90, 20);
     gainSlider.setPopupDisplayEnabled(true, false, this);
-    gainSlider.setTextValueSuffix(" Gain");
     addAndMakeVisible(gainSlider);
 
     // Configure gain label

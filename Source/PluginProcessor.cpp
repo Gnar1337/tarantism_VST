@@ -105,15 +105,11 @@ void TarantismAudioProcessor::processBlock(juce::AudioBuffer<float>& buffer,
     for (auto i = totalNumInputChannels; i < totalNumOutputChannels; ++i)
         buffer.clear(i, 0, buffer.getNumSamples());
 
-    // Apply gain to all channels
+    // Apply gain to all channels using JUCE's optimized method
     float gain = gainParameter->load();
     for (int channel = 0; channel < totalNumInputChannels; ++channel)
     {
-        auto* channelData = buffer.getWritePointer(channel);
-        for (int sample = 0; sample < buffer.getNumSamples(); ++sample)
-        {
-            channelData[sample] *= gain;
-        }
+        buffer.applyGain(channel, 0, buffer.getNumSamples(), gain);
     }
 }
 
