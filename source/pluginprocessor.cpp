@@ -190,8 +190,10 @@ int32 TarantismProcessor::calculateNotesNeeded()
     // Calculate how many notes fit in the measure based on duration
     // For example: 1 measure of 8th notes = 8 notes
     // 2 measures of quarter notes = 8 notes
-    double notesPerMeasure = 4.0 * (noteDuration / 4.0); // Assuming 4/4 time
-    int32 totalNotes = (int32)(measureLength * notesPerMeasure);
+    // In 4/4 time, there are 4 quarter notes per measure
+    // So for note duration D (1=whole, 2=half, 4=quarter, 8=eighth, 16=sixteenth)
+    // Notes per measure = 4 * (D / 4) = D
+    int32 totalNotes = (int32)(measureLength * noteDuration);
     return std::max(1, totalNotes);
 }
 
