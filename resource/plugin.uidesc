@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vstgui-ui-description version="1">
+    <fonts>
+    </fonts>
+    <colors>
+        <color name="Background" rgba="#282828ff"/>
+        <color name="Label" rgba="#ffffffff"/>
+    </colors>
+    <template background-color="Background" background-color-draw-style="filled and stroked" class="CViewContainer" 
+              maxSize="600, 400" minSize="600, 400" mouse-enabled="true" name="view" 
+              origin="0, 0" size="600, 400" transparent="false" wants-focus="false">
+        
+        <!-- Title -->
+        <view back-color="Background" background-offset="0, 0" class="CTextLabel" 
+              default-value="0.5" font="~ NormalFont" font-color="Label" 
+              frame-width="1" max-value="1" min-value="0" mouse-enabled="false" 
+              opacity="1" origin="20, 20" round-rect-radius="6" shadow-color="~ GreyShadow" 
+              size="560, 30" style-3D-in="false" style-3D-out="false" 
+              style-no-draw="false" style-no-frame="false" style-no-text="false" 
+              style-round-rect="false" style-shadow-text="false" text-alignment="center" 
+              text-inset="0, 0" text-rotation="0" text-shadow-offset="1, 1" 
+              title="Tarantism - MIDI Manipulation VST" transparent="false" 
+              wants-focus="false" wheel-inc-value="0.1"/>
+        
+        <!-- Keyboard View -->
+        <view back-color="~ WhiteCColor" background-offset="0, 0" 
+              bitmap-offset="0, 0" class="KeyboardView" 
+              control-tag="" default-value="0" max-value="1" min-value="0" 
+              mouse-enabled="true" opacity="1" origin="20, 70" 
+              size="560, 100" transparent="false" wants-focus="false" 
+              wheel-inc-value="0.1"/>
+        
+        <!-- Measure Length Control -->
+        <view back-color="~ BlackCColor" background-offset="0, 0" class="CTextLabel" 
+              default-value="0.5" font="~ NormalFont" font-color="Label" 
+              frame-width="1" max-value="1" min-value="0" mouse-enabled="false" 
+              opacity="1" origin="20, 200" round-rect-radius="6" shadow-color="~ GreyShadow" 
+              size="150, 20" text-alignment="left" title="Measure Length:" 
+              transparent="true" wants-focus="false"/>
+        
+        <view back-color="~ BlackCColor" background-offset="0, 0" class="CKnob" 
+              angle-range="270" angle-start="135" autosize="right left" 
+              bitmap="knob" circle-drawing="true" control-tag="Unit1::MeasureLength" 
+              corona-color="~ BlueCColor" corona-dash-dot="false" corona-drawing="true" 
+              corona-from-center="false" corona-inset="3" corona-inverted="false" 
+              corona-line-cap-butt="false" corona-outline="true" 
+              corona-outline-width-add="1" default-value="0" handle-color="~ WhiteCColor" 
+              handle-line-width="3" handle-shadow-color="~ RedCColor" max-value="1" 
+              min-value="0" mouse-enabled="true" opacity="1" origin="20, 225" 
+              size="60, 60" transparent="false" value-inset="3" 
+              wants-focus="true" wheel-inc-value="0.1" zoom-factor="10"/>
+        
+        <view back-color="~ BlackCColor" background-offset="0, 0" class="CTextEdit" 
+              back-offset="0, 0" control-tag="Unit1::MeasureLength" default-value="0" 
+              font="~ NormalFont" font-color="Label" frame-color="~ GreyCColor" 
+              frame-width="1" immediate-text-change="false" max-value="1" min-value="0" 
+              mouse-enabled="true" opacity="1" origin="90, 245" round-rect-radius="6" 
+              secure-style="false" shadow-color="~ GreyShadow" size="80, 20" 
+              style-3D-in="false" style-3D-out="false" style-doubleclick="false" 
+              style-no-draw="false" style-no-frame="false" style-no-text="false" 
+              style-round-rect="false" style-shadow-text="false" text-alignment="center" 
+              text-inset="0, 0" text-rotation="0" text-shadow-offset="1, 1" 
+              title="Measure" transparent="false" wants-focus="true" 
+              wheel-inc-value="0.1"/>
+        
+        <!-- Note Duration Control -->
+        <view back-color="~ BlackCColor" background-offset="0, 0" class="CTextLabel" 
+              default-value="0.5" font="~ NormalFont" font-color="Label" 
+              frame-width="1" max-value="1" min-value="0" mouse-enabled="false" 
+              opacity="1" origin="220, 200" round-rect-radius="6" shadow-color="~ GreyShadow" 
+              size="150, 20" text-alignment="left" title="Note Duration:" 
+              transparent="true" wants-focus="false"/>
+        
+        <view back-color="~ BlackCColor" background-offset="0, 0" class="CKnob" 
+              angle-range="270" angle-start="135" autosize="right left" 
+              bitmap="knob" circle-drawing="true" control-tag="Unit1::NoteDuration" 
+              corona-color="~ BlueCColor" corona-dash-dot="false" corona-drawing="true" 
+              corona-from-center="false" corona-inset="3" corona-inverted="false" 
+              corona-line-cap-butt="false" corona-outline="true" 
+              corona-outline-width-add="1" default-value="0.4" handle-color="~ WhiteCColor" 
+              handle-line-width="3" handle-shadow-color="~ RedCColor" max-value="1" 
+              min-value="0" mouse-enabled="true" opacity="1" origin="220, 225" 
+              size="60, 60" transparent="false" value-inset="3" 
+              wants-focus="true" wheel-inc-value="0.1" zoom-factor="10"/>
+        
+        <view back-color="~ BlackCColor" background-offset="0, 0" class="CTextEdit" 
+              back-offset="0, 0" control-tag="Unit1::NoteDuration" default-value="0.4" 
+              font="~ NormalFont" font-color="Label" frame-color="~ GreyCColor" 
+              frame-width="1" immediate-text-change="false" max-value="1" min-value="0" 
+              mouse-enabled="true" opacity="1" origin="290, 245" round-rect-radius="6" 
+              secure-style="false" shadow-color="~ GreyShadow" size="80, 20" 
+              style-3D-in="false" style-3D-out="false" style-doubleclick="false" 
+              style-no-draw="false" style-no-frame="false" style-no-text="false" 
+              style-round-rect="false" style-shadow-text="false" text-alignment="center" 
+              text-inset="0, 0" text-rotation="0" text-shadow-offset="1, 1" 
+              title="Duration" transparent="false" wants-focus="true" 
+              wheel-inc-value="0.1"/>
+        
+        <!-- Octave Control -->
+        <view back-color="~ BlackCColor" background-offset="0, 0" class="CTextLabel" 
+              default-value="0.5" font="~ NormalFont" font-color="Label" 
+              frame-width="1" max-value="1" min-value="0" mouse-enabled="false" 
+              opacity="1" origin="420, 200" round-rect-radius="6" shadow-color="~ GreyShadow" 
+              size="150, 20" text-alignment="left" title="Octave:" 
+              transparent="true" wants-focus="false"/>
+        
+        <view back-color="~ BlackCColor" background-offset="0, 0" class="CKnob" 
+              angle-range="270" angle-start="135" autosize="right left" 
+              bitmap="knob" circle-drawing="true" control-tag="Unit1::Octave" 
+              corona-color="~ BlueCColor" corona-dash-dot="false" corona-drawing="true" 
+              corona-from-center="false" corona-inset="3" corona-inverted="false" 
+              corona-line-cap-butt="false" corona-outline="true" 
+              corona-outline-width-add="1" default-value="0.3" handle-color="~ WhiteCColor" 
+              handle-line-width="3" handle-shadow-color="~ RedCColor" max-value="1" 
+              min-value="0" mouse-enabled="true" opacity="1" origin="420, 225" 
+              size="60, 60" transparent="false" value-inset="3" 
+              wants-focus="true" wheel-inc-value="0.1" zoom-factor="10"/>
+        
+        <view back-color="~ BlackCColor" background-offset="0, 0" class="CTextEdit" 
+              back-offset="0, 0" control-tag="Unit1::Octave" default-value="0.3" 
+              font="~ NormalFont" font-color="Label" frame-color="~ GreyCColor" 
+              frame-width="1" immediate-text-change="false" max-value="1" min-value="0" 
+              mouse-enabled="true" opacity="1" origin="490, 245" round-rect-radius="6" 
+              secure-style="false" shadow-color="~ GreyShadow" size="80, 20" 
+              style-3D-in="false" style-3D-out="false" style-doubleclick="false" 
+              style-no-draw="false" style-no-frame="false" style-no-text="false" 
+              style-round-rect="false" style-shadow-text="false" text-alignment="center" 
+              text-inset="0, 0" text-rotation="0" text-shadow-offset="1, 1" 
+              title="Octave" transparent="false" wants-focus="true" 
+              wheel-inc-value="0.1"/>
+        
+        <!-- Info Text -->
+        <view back-color="Background" background-offset="0, 0" class="CTextLabel" 
+              default-value="0.5" font="~ NormalFont" font-color="Label" 
+              frame-width="1" max-value="1" min-value="0" mouse-enabled="false" 
+              opacity="1" origin="20, 310" round-rect-radius="6" shadow-color="~ GreyShadow" 
+              size="560, 60" style-3D-in="false" style-3D-out="false" 
+              style-no-draw="false" style-no-frame="false" style-no-text="false" 
+              style-round-rect="false" style-shadow-text="false" text-alignment="center" 
+              text-inset="5, 5" text-rotation="0" text-shadow-offset="1, 1" 
+              title="Play MIDI notes to collect them.&#x0a;They will be transposed to the selected octave.&#x0a;Number of notes = Measure Length × Notes per measure based on Duration" 
+              transparent="true" wants-focus="false" wheel-inc-value="0.1"/>
+              
+    </template>
+    
+    <control-tags>
+        <control-tag name="Unit1::MeasureLength" tag="100"/>
+        <control-tag name="Unit1::NoteDuration" tag="101"/>
+        <control-tag name="Unit1::Octave" tag="102"/>
+        <control-tag name="Unit1::Bypass" tag="103"/>
+    </control-tags>
+    
+    <custom>
+        <attributes name="UIEditController"/>
+        <attributes name="UIDescription"/>
+        <attributes name="UIViewCreator"/>
+    </custom>
+</vstgui-ui-description>
